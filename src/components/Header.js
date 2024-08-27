@@ -31,7 +31,11 @@ const Header = () => {
   };
   return (
     <div className="flex space justify-between align items-center bg-[#8f4921] sticky z-10 top-0 p-1 h-32">
-      <img className="rounded-3xl" src={require("/logo.png")} alt="Logo" />
+      <img
+        className="rounded-3xl"
+        src={require("/public/logo.png")}
+        alt="Logo"
+      />
       <ul className="flex gap-16 mr-3">
         <li className="text-[22px] font-bold hover:text-slate-300">
           <Link to="/">Home</Link>
