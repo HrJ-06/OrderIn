@@ -24,7 +24,7 @@ const Body = () => {
   // https://cors-anywhere.herokuapp.com/ for CORS bypass
   const fetchData = async () => {
     try {
-      const data = await fetch(SWIGGY_API);
+      const data = await fetch("/.netlify/functions/proxy");
       const json = await data.json();
       const restaurants =
         (
