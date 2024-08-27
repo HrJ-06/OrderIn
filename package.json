@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "description": "",
-  "main": "app.js",
+  "main": "index.html",
   "scripts": {
     "test": "jest",
     "watch-test": "jest --watch",
