@@ -1,7 +1,7 @@
 import Card, { WithOffer } from "./Card";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { SWIGGY_API, proxy_url } from "../utils/constants";
+import { SWIGGY_API } from "../utils/constants";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
@@ -24,7 +24,7 @@ const Body = () => {
   // https://cors-anywhere.herokuapp.com/ for CORS bypass
   const fetchData = async () => {
     try {
-      const data = await fetch(proxy_url + SWIGGY_API);
+      const data = await fetch(SWIGGY_API);
       const json = await data.json();
       const restaurants =
         (
