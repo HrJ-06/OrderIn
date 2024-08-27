@@ -1,6 +1,7 @@
 import React, { lazy, Suspense, useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
+import { ReactNotifications } from "react-notifications-component";
 import Body from "./components/Body";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import About from "./components/About";
@@ -11,27 +12,32 @@ import contextAPI from "./utils/contextAPI";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
 import Cart from "./components/Cart";
-
-const Grocery = lazy(() => import("./components/Grocery"));
-
-const Footer = () => <p> This is the footer</p>;
+import Footer from "./components/Footer";
+import Login from "./components/Login";
 
 const App = () => {
-  const [testCon, setTestCon] = useState();
+  const [testCon, setTestCon] = useState("");
+  const [login, setLogin] = useState(false);
 
   useEffect(() => {
     const data = {
-      name: "Hrishit",
+      name: "",
     };
-
     setTestCon(data.name);
   }, []);
+
   return (
     <Provider store={appStore}>
-      <div>
-        <contextAPI.Provider value={{ loggedUser: testCon, setTestCon }}>
+      <div className="flex flex-col min-h-screen">
+        <contextAPI.Provider
+          value={{ loggedUser: testCon, setTestCon, login, setLogin }}
+        >
+          <ReactNotifications />
           <Header />
-          <Outlet />
+          <div className="flex-grow bg-[#f0ddaa]">
+            <Outlet />
+          </div>
+          <Footer />
         </contextAPI.Provider>
       </div>
     </Provider>
@@ -48,11 +54,11 @@ const appRouter = createBrowserRouter([
         element: <Body />,
       },
       {
-        path: "/About",
+        path: "/about",
         element: <About />,
       },
       {
-        path: "/Contact",
+        path: "/contact",
         element: <Contact />,
       },
       {
@@ -60,16 +66,12 @@ const appRouter = createBrowserRouter([
         element: <Restaurant />,
       },
       {
-        path: "/Grocery",
-        element: (
-          <Suspense>
-            <Grocery />
-          </Suspense>
-        ),
+        path: "/cart",
+        element: <Cart />,
       },
       {
-        path: "/Cart",
-        element: <Cart />,
+        path: "/login",
+        element: <Login />,
       },
     ],
     errorElement: <Error />,

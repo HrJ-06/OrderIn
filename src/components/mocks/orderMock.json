@@ -1,0 +1,207 @@
+{
+  "card": {
+    "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+    "info": {
+      "id": "137417437",
+      "name": "Schezwan Chicken Dry",
+      "category": "Starters & Soup",
+      "description": "Serves 1 | (Spicy) Diced Chicken, Onion, Capsicum Tossed With Schezwan Sauce.",
+      "imageId": "FOOD_CATALOG/IMAGES/CMS/2024/6/7/ca939afd-fad4-48f0-b0e6-567c81c0f8b9_dc08e37f-95db-49ed-bf51-a876febf53df.jpg_compressed",
+      "inStock": 1,
+      "price": 38900,
+      "finalPrice": 14900,
+      "variants": {},
+      "variantsV2": {},
+      "addons": [
+        {
+          "groupId": "145241259",
+          "groupName": "Add Non Veg Rice/Noodle",
+          "choices": [
+            {
+              "id": "115367835",
+              "name": "Chicken Chinese Hakka Noodles - Half",
+              "price": 22900,
+              "inStock": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "115367833",
+              "name": "Chicken Fried Rice - Half",
+              "price": 21500,
+              "inStock": 1,
+              "isEnabled": 1
+            }
+          ],
+          "maxAddons": 2,
+          "maxFreeAddons": -1
+        },
+        {
+          "groupId": "145241260",
+          "groupName": "Add Soup",
+          "choices": [
+            {
+              "id": "115367874",
+              "name": "Veg Manchow Soup with Crispy Noodles",
+              "price": 18900,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "115367873",
+              "name": "Veg Schezwan Noodle Soup",
+              "price": 18900,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "115367865",
+              "name": "Chicken Manchow Soup with Crispy Noodles",
+              "price": 19900,
+              "inStock": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "115367872",
+              "name": "Chicken Schezwan Noodle Soup",
+              "price": 19900,
+              "inStock": 1,
+              "isEnabled": 1
+            }
+          ],
+          "maxAddons": 2,
+          "maxFreeAddons": -1
+        },
+        {
+          "groupId": "145241261",
+          "groupName": "Add Dessert",
+          "choices": [
+            {
+              "id": "115367866",
+              "name": "Chocolate Mousse - Small",
+              "price": 5900,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "115367867",
+              "name": "Black forest Mousse Cake",
+              "price": 5900,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "115367858",
+              "name": "Salted Caramel Choco Mousse",
+              "price": 5900,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "115367806",
+              "name": "Choco Lava",
+              "price": 9900,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            }
+          ],
+          "maxAddons": 4,
+          "maxFreeAddons": -1
+        },
+        {
+          "groupId": "145241262",
+          "groupName": "Add Drinks",
+          "choices": [
+            {
+              "id": "115367819",
+              "name": "7 Up",
+              "price": 6000,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "115367788",
+              "name": "Pepsi Pet Bottle",
+              "price": 6000,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "115367805",
+              "name": "Aam Panna",
+              "price": 9900,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "115367807",
+              "name": "Masala Shikanji",
+              "price": 9900,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "115367851",
+              "name": "Peach Iced Tea",
+              "price": 9900,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "115367852",
+              "name": "Lemon Ice Tea",
+              "price": 9900,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "115947861",
+              "name": "Coolberg Peach",
+              "price": 12500,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "115947860",
+              "name": "Coolberg Cranberry",
+              "price": 12500,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            }
+          ],
+          "maxAddons": 8,
+          "maxFreeAddons": -1
+        }
+      ],
+      "itemAttribute": {
+        "vegClassifier": "NONVEG",
+        "portionSize": "Serves 1"
+      },
+      "ribbon": {},
+      "showImage": true,
+      "offerTags": [{}],
+      "itemBadge": {},
+      "badgesV2": {},
+      "itemNudgeType": "FinalPrice",
+      "ratings": {
+        "aggregatedRating": {}
+      },
+      "itemPriceStrikeOff": true
+    },
+    "analytics": {},
+    "hideRestaurantDetails": true
+  }
+}

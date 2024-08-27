@@ -1,12 +1,17 @@
 import { useParams } from "react-router-dom";
 import useRestaurantData from "../utils/useRestaurantData";
 import ResCat from "./ResCat";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 const Restaurant = () => {
   const { resId } = useParams();
   const resdata = useRestaurantData({ resId });
   const [openIndex, setOpenIndex] = useState(null);
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   const {
     name,
     cuisines,
@@ -19,9 +24,11 @@ const Restaurant = () => {
   const itemMenu = resdata[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
   if (!itemMenu) {
     return (
-      <div className="">
-        <div className="p-5 border border-gray-400 w-[630px] ml-[350px] rounded-xl shadow-2xl text-left mt-[92px] h-36"></div>
-        <div className="mt-96"></div>
+      <div className="p-10 min-h-screen">
+        <div className="mb-10">
+          <Skeleton className="h-36 mt-12 p-5 w-6/12 ml-[310px] rounded-xl bg-gray-200" />
+        </div>
+        <Skeleton className="w-6/12 border-b-2 bg-slate-100 rounded-xl mb-2 ml-[310px] h-[70px]"></Skeleton>
       </div>
     );
   }
@@ -31,11 +38,11 @@ const Restaurant = () => {
       "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
   );
 
-  return itemMenu ? (
-    <div className="text-center p-10">
+  return (
+    <div className="text-center p-10 min-h-screen">
       <div className="mb-10">
-        <h1 className="font-bold text-2xl mb-5">{name}</h1>
-        <div className="p-5 border border-gray-400 w-6/12 ml-[310px] rounded-xl shadow-2xl text-left">
+        <h1 className="font-bold text-2xl mb-5 ">{name}</h1>
+        <div className="p-5 border border-gray-400 w-6/12 ml-[310px] rounded-xl shadow-2xl text-left bg-slate-100">
           <h3 className="text-lg font-semibold">
             ⭐ {avgRating} ({totalRatingsString}) : {costForTwoMessage}
           </h3>
@@ -60,15 +67,12 @@ const Restaurant = () => {
                     setOpenIndex(index);
                   }
                 }}
-                oIndex
               />
             </div>
           </div>
         );
       })}
     </div>
-  ) : (
-    <h2 className="res-shim-text">Let's get it for you...</h2>
   );
 };
 

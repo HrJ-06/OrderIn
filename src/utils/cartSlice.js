@@ -8,17 +8,29 @@ const cartSlice = createSlice({
   reducers: {
     addItem: (state, action) => {
       state.items.push(action.payload);
-      console.log(action.payload);
     },
-    removeItem: (state) => {
-      state.items.pop();
+    removeItem: (state, action) => {
+      state.items = state.items.filter(
+        (item) =>
+          item?.data[0]?.card?.info?.id !=
+          action.payload?.data[0]?.card?.info?.id
+      );
     },
     clearCart: (state) => {
       state.items.length = 0;
     },
+    incrementItem: (state, action) => {
+      const ind = action.payload;
+      state.items[ind].data[1]++;
+    },
+    decrementItem: (state, action) => {
+      const ind = action.payload;
+      state.items[ind].data[1]--;
+    },
   },
 });
 
-export const { addItem, removeItem, clearCart } = cartSlice.actions;
+export const { addItem, removeItem, clearCart, incrementItem, decrementItem } =
+  cartSlice.actions;
 
 export default cartSlice.reducer;

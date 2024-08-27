@@ -1,12 +1,17 @@
-import { useContext } from "react";
 import PersonCard from "./PersonCard";
+import { useEffect } from "react";
 
 const About = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
-    <div className="bg-[#f0ddaa] p-4 h-screen">
-      <h1 className="text-4xl mb-6">About Us</h1>
+    <div className="p-4 h-screen">
+      <h2 className="text-2xl mb-5">
+        A website crafted with <b>care</b> for your passion for <b>food</b>.
+      </h2>
       <h2 className="text-2xl">
-        A website made <b>with</b> love <b>for</b> your love of food ❤️
+        Don't start thinkin', just <b>OrderIn'</b> 😉
       </h2>
       <PersonCard name="Hrishit Jhanji" place="VIT Vellore" />
     </div>
