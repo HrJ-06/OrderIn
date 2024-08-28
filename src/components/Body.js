@@ -21,7 +21,6 @@ const Body = () => {
   }, []);
   const [val, setVal] = useState("");
 
-  // https://cors-anywhere.herokuapp.com/ for CORS bypass
   const fetchData = async () => {
     try {
       const data = await fetch(SWIGGY_API);
