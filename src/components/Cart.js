@@ -70,7 +70,6 @@ const Cart = () => {
           total +=
             (item.data[0]?.card?.info?.price / 100 ||
               item.data[0]?.card?.info?.defaultPrice / 100) * item?.data[1];
-          console.log(total);
           return (
             <OrderCard
               key={item?.data[0]?.card?.info?.id}
