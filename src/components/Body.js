@@ -30,7 +30,6 @@ const Body = () => {
           json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle ||
           json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle
         )?.restaurants || [];
-      console.log(restaurants);
       restaurants.forEach((res) => {
         timesum += res.info.sla.deliveryTime;
         ratesum += res.info.avgRating;
