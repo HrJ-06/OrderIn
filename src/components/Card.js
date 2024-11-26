@@ -15,7 +15,7 @@ const Card = ({ res }) => {
 
   return (
     <div
-      className="w-52 rounded-lg bg-[#edede8] p-2 h-[400px] hover:bg-[#c4c4b1]"
+      className="w-52 rounded-lg bg-[#edede8] p-2 h-[450px] hover:bg-[#c4c4b1]"
       data-testid="cardss"
     >
       <img
