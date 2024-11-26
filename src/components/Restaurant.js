@@ -53,13 +53,13 @@ const Restaurant = () => {
       </div>
 
       {itemCats.map((item, index) => {
-        const { itemCards, title } = item?.card?.card;
+        const { title } = item?.card?.card;
         return (
           <div className="flex justify-center" key={title}>
             <div className="w-6/12 border-b-2 bg-slate-100 rounded-xl mb-2">
               <ResCat
                 cat={item}
-                showItems={index === openIndex && true}
+                showItems={index === openIndex}
                 setIndex={() => {
                   if (openIndex === index) {
                     setOpenIndex(null);

@@ -71,7 +71,13 @@ const OrderCard = ({ data, resval }) => {
         <div className="pt-4 pr-3">{description}</div>
       </div>
       <div className="w-4/12 h-48 p-4 ml-3 flex flex-col gap-2 items-center">
-        <img src={CDN_URL + imageId} className="w-[600px] rounded-lg h-40" />
+        {imageId && (
+          <img
+            alt="image"
+            src={CDN_URL + imageId}
+            className="w-[600px] rounded-lg h-40"
+          />
+        )}
         {resval ? (
           <button
             className="bg-slate-400 text-lg font-semibold w-16 rounded-lg"

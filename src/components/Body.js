@@ -31,8 +31,8 @@ const Body = () => {
           json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle
         )?.restaurants || [];
       restaurants.forEach((res) => {
-        timesum += res.info.sla.deliveryTime;
-        ratesum += res.info.avgRating;
+        timesum += res?.info?.sla?.deliveryTime;
+        ratesum += res?.info?.avgRating;
       });
       setRess(restaurants);
       setResso(restaurants);
@@ -91,9 +91,7 @@ const Body = () => {
         <button
           className="h-8 w-36 text-lg border font-semibold rounded-lg bg-[#fcfabb] font-serif"
           onClick={() => {
-            const top = ress.filter(
-              (res) => res?.info?.avgRating > ratesum / 8
-            );
+            const top = ress.filter((res) => res?.info?.avgRating > avgRate);
             setRess(top);
           }}
         >
@@ -103,7 +101,7 @@ const Body = () => {
           className="h-8 w-36 text-lg border font-semibold rounded-lg bg-[#fcfabb] font-serif"
           onClick={() => {
             const top = ress.filter(
-              (res) => res?.info?.sla?.deliveryTime < timesum / 8
+              (res) => res?.info?.sla?.deliveryTime < avgTime
             );
             setRess(top);
           }}
@@ -123,8 +121,6 @@ const Body = () => {
                 />
               ))
           : ress.map((re) => {
-              ratesum += re.info.avgRating;
-              timesum += re.info.sla.deliveryTime;
               return (
                 <Link
                   key={re?.info?.id}

@@ -1,10 +1,7 @@
-import { useState } from "react";
 import OrderCard from "./OrderCard";
 
 const ResCat = ({ cat, showItems, setIndex }) => {
-  const [catOpen, setCatOpen] = useState(false);
   const toggleSet = () => {
-    setCatOpen(!catOpen);
     setIndex();
   };
   const { title, itemCards } = cat?.card?.card;
@@ -17,7 +14,7 @@ const ResCat = ({ cat, showItems, setIndex }) => {
         <div className="font-semibold text-lg">
           {title} ({itemCards.length})
         </div>
-        {catOpen ? <div>🔼</div> : <div>🔽</div>}
+        {showItems ? <div>🔼</div> : <div>🔽</div>}
       </div>
 
       {itemCards.map((itemc) => {

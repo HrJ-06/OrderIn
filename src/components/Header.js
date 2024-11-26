@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import contextAPI from "../utils/contextAPI";
@@ -19,7 +19,6 @@ const Header = () => {
       container: "bottom-right",
       type: "success",
       insert: "top",
-
       dismiss: {
         duration: 1000,
       },
@@ -68,18 +67,6 @@ const Header = () => {
               </button>
             )}
           </div>
-
-          {/* <div> */}
-          {/* <div className="text-[22px] font-semibold">{loggedUser}</div> */}
-          {/* <button
-              className="text-[22px] font-semibold bg-amber-900 h-10  font-mono rounded-md"
-              onClick={() => {
-                logbtn === "Login" ? setLogbtn("Logout") : setLogbtn("Login");
-              }}
-            >
-              {logbtn}
-            </button>
-          </div> */}
         </li>
       </ul>
     </div>
